@@ -1,0 +1,588 @@
+2026-01-16 11:08:45 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:08:45 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:08:45 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:08:47 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:08:47 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:08:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:08:50 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:08:50 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:08:50 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:08:50 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:08:50 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:08:50 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:08:57 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:08:57 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:08:58 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:08:58 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:09:00 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:09:00 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:09:00 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:09:00 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:09:01 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:09:01 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:09:01 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:09:01 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:09:01 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:09:01 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:09:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:09:02 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:09:02 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:09:04 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:09:09 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:09:09 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:09:09 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:09:09 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:09:10 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:09:11 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:09:11 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:09:11 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:09:11 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:09:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:09:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:09:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:09:17 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:09:17 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:09:17 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:09:17 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:09:17 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 47.81 seconds and fetched: rows=56406
+2026-01-16 11:09:17 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:09:18 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:09:22 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:09:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:09:23 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:09:23 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:09:32 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:09:33 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:09:33 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:09:34 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:09:34 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:09:34 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:09:35 - write_pandas - ERROR - Error writing to Snowflake: 000904 (42000): 01c1c319-0001-e594-0001-e2fe00f791da: SQL compilation error: error line 1 at position 143
+invalid identifier 'SALES_TYPE'
+2026-01-16 11:09:35 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 50.08 seconds.
+2026-01-16 11:15:46 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:15:46 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:15:46 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:15:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:15:51 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:15:51 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:15:51 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:15:51 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:15:52 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:15:52 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:15:52 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:15:52 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:15:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:15:59 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:15:59 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:15:59 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:16:00 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:16:01 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:16:02 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:16:03 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:16:03 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:16:03 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:16:04 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:16:04 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:16:04 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:16:04 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 33.31 seconds and fetched: rows=56406
+2026-01-16 11:16:04 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:16:04 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:16:06 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:16:06 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:16:06 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:16:06 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:16:15 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:16:16 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:16:16 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:16:17 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:16:18 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:16:18 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:16:19 - write_pandas - ERROR - Error writing to Snowflake: 100071 (22000): 01c1c320-0001-e56b-0001-e2fe00f6e1a2: Failed to cast variant value 1750809600000000000 to DATE
+2026-01-16 11:16:19 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 33.06 seconds.
+2026-01-16 11:18:34 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:18:34 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:18:34 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:18:35 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:18:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:18:41 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:18:41 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:18:41 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:18:41 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:18:41 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:18:41 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:18:41 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:18:43 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:18:46 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:18:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:18:48 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:18:49 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:18:50 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:18:50 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:18:50 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:18:50 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:18:51 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:18:51 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:18:51 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:18:51 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:18:51 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 31.18 seconds and fetched: rows=56406
+2026-01-16 11:18:51 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:18:51 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:18:53 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:18:53 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:18:54 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:18:54 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:19:00 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:19:00 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:19:00 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:19:01 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:19:01 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:19:01 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:19:04 - write_pandas - ERROR - Error writing to Snowflake: 100071 (22000): 01c1c323-0001-e577-0001-e2fe00f702f6: Failed to cast variant value 1750809600000000000 to DATE
+2026-01-16 11:19:04 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 29.27 seconds.
+2026-01-16 11:20:23 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:20:23 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:20:23 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:20:24 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:20:24 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:20:24 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:20:24 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:20:24 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:20:25 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:20:25 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:20:25 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:20:25 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:20:29 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:20:29 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:20:30 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:20:30 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:20:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:20:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:20:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:20:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:20:37 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:20:38 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:20:39 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:20:39 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:20:40 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:20:40 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:20:40 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:20:40 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 38.43 seconds and fetched: rows=56406
+2026-01-16 11:20:40 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:20:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:20:42 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:20:42 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:20:42 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:20:42 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:20:52 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:20:52 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:20:53 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:20:54 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:20:54 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:20:54 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:20:56 - write_pandas - ERROR - Error writing to Snowflake: 100071 (22000): 01c1c324-0001-e481-0001-e2fe00f752ce: Failed to cast variant value 1750809600000000000 to DATE
+2026-01-16 11:20:56 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 33.07 seconds.
+2026-01-16 11:21:38 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:21:38 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:21:38 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:21:39 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:21:39 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:21:39 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:21:39 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:21:39 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:21:39 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:21:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:21:40 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:21:40 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:21:45 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:21:45 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:21:45 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:21:45 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:21:46 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:21:46 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:21:46 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:21:47 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:21:47 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:21:47 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:21:47 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:21:50 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:21:54 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:21:54 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:21:54 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:21:54 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:21:55 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:21:56 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:21:57 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:21:58 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:21:58 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:21:58 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:21:58 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:21:59 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:21:59 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 35.51 seconds and fetched: rows=56406
+2026-01-16 11:22:02 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:22:02 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:22:04 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:22:04 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:22:04 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:22:04 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:22:11 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:22:11 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:22:11 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:22:12 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:22:13 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:22:13 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:22:14 - write_pandas - INFO - Verification: 18453 rows found in SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE
+2026-01-16 11:22:15 - write_pandas - INFO - Successfully written 18453 rows to SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE
+2026-01-16 11:22:15 - write_pandas - INFO - Number of chunks: 1, Success: True
+2026-01-16 11:22:15 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 36.61 seconds.
+2026-01-16 11:22:58 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:22:58 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:22:58 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:22:59 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:23:03 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:23:03 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:23:04 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:23:04 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:23:06 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:23:11 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:23:12 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:23:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:23:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:23:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:23:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:23:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:23:13 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:23:14 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:23:15 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:23:15 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:23:15 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:23:15 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:23:16 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:23:16 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 29.67 seconds and fetched: rows=56406
+2026-01-16 11:23:16 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:23:16 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:23:18 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:23:18 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:23:18 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:23:18 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:23:25 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:23:25 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:23:25 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:23:26 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:23:27 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:23:27 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:23:29 - write_pandas - INFO - Verification: 18453 rows found in SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE
+2026-01-16 11:23:29 - write_pandas - INFO - Successfully written 18453 rows to SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE
+2026-01-16 11:23:29 - write_pandas - INFO - Number of chunks: 1, Success: True
+2026-01-16 11:23:29 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 31.21 seconds.
+2026-01-16 11:25:16 - Main_sp_ubt_getterminalinvoice - INFO - Logging started. Log file: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL/logs/2026-01-16/Main_sp_ubt_getterminalinvoice_20260116.log
+2026-01-16 11:25:16 - Main_sp_ubt_getterminalinvoice - INFO - Current working directory: /home/minhhoang/pyspark/Python-Project/UBTI_4.0.1_TR_RTMS_Terminal_Inv/ETL
+2026-01-16 11:25:16 - Main_sp_ubt_getterminalinvoice - INFO - procdate set to: 2025-06-25 00:00:00
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - Starting ETL process...
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - procdate: 2025-06-25 00:00:00
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TERMINAL...
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TERMINAL processed successfully. Rows: 1025
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_PRODUCT...
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_PRODUCT processed successfully. Rows: 12
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_LOCATION...
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_LOCATION processed successfully. Rows: 351
+2026-01-16 11:25:17 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_TmpTicketByWageAndSales...
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_TmpTicketByWageAndSales processed successfully. Rows: 77
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_ResultCashlessInTerminal...
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_ResultCashlessInTerminal processed successfully. Rows: 0
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_iTOTO...
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_iTOTO processed successfully. Rows: 0
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing UBT_TEMP_GROUPTOTO...
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - UBT_TEMP_GROUPTOTO processed successfully. Rows: 0
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_CancelledBetTicketState...
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_CancelledBetTicketState processed successfully. Rows: 4
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_SalesGroupToto...
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_SalesGroupToto processed successfully. Rows: 0
+2026-01-16 11:25:22 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salestoto...
+2026-01-16 11:25:23 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salestoto processed successfully. Rows: 0
+2026-01-16 11:25:23 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_transamountdetaildata...
+2026-01-16 11:25:23 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Initializing SP_UBT_GETTRANSAMOUNTDETAILS with input range from=20250625, to=20250625
+2026-01-16 11:25:23 - snowflake.connector.connection - INFO - Snowflake Connector for Python Version: 4.0.0, Python Version: 3.12.3, Platform: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+2026-01-16 11:25:23 - snowflake.connector.connection - INFO - Connecting to GLOBAL Snowflake domain
+2026-01-16 11:25:28 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Processing df_trans_amt ...
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 SAL' completed successfully, rows=1018
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 SAL' completed successfully, rows=1018
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL' completed successfully, rows=1018
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 SAL - added' completed successfully, rows=1018
+2026-01-16 11:25:32 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 SAL' completed successfully, rows=1018
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HORSE RACING ProdID=1 COL' completed successfully, rows=1024
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] '4D ProdID=2 COL' completed successfully, rows=1025
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'TOTO MATCH ProdID=3 COL' completed successfully, rows=1024
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SWEEP ProdID=4 COL PB06 PB03' completed successfully, rows=1025
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'SPORTS ProdID=5,6 COL' completed successfully, rows=1025
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PAY' completed successfully, rows=2
+2026-01-16 11:25:33 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 PAY LOSING BET REBATE-HORSE RACING' completed successfully, rows=1017
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=1 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'HorseRacing PRODID=2,3 CANCELLED' completed successfully, rows=3075
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SWEEP PRODID=4 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'CANCELLED BETTICKETS SPORTS PRODID=5,6 CANCELLED' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'Payment Type 'NC','NN'' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ' Pay Type 'NCC','NFP'' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PaynowQR 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNRIC'' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'PayNow Transaction Fee 'PNQR'' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL OFFLine ORDERS' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'RFD Offlines ORDERS' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'COL GATE ADMISSION' completed successfully, rows=1025
+2026-01-16 11:25:34 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - FUN' completed successfully, rows=1024
+2026-01-16 11:25:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'FUNDING AND RECOVERY - REC' completed successfully, rows=1024
+2026-01-16 11:25:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - FUN' completed successfully, rows=1024
+2026-01-16 11:25:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] 'ONLINE ADJUSTMENT - REC' completed successfully, rows=1024
+2026-01-16 11:25:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] Date conversion completed
+2026-01-16 11:25:35 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] df_temp_gst_sal update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:25:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:25:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_can_tktcount update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:25:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_toto_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:25:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] ubt_temp_totofo_sal_count update completed in ubt_temp_trans_amt, rows=62465
+2026-01-16 11:25:36 - sp_ubt_gettransamountdetails - INFO - [SP_GETTRANSAMOUNTDETAILS] completed successfully in 33.04 seconds and fetched: rows=56406
+2026-01-16 11:25:36 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_transamountdetaildata processed successfully. Rows: 55263
+2026-01-16 11:25:37 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_sales_scandsr...
+2026-01-16 11:25:39 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_sales_scandsr processed successfully. Rows: 0
+2026-01-16 11:25:39 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_salesfactorconfig...
+2026-01-16 11:25:39 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_salesfactorconfig processed successfully. Rows: 8
+2026-01-16 11:25:39 - Main_sp_ubt_getterminalinvoice - INFO - Processing ubt_temp_tmpterlocprdsalesamt...
+2026-01-16 11:25:45 - Main_sp_ubt_getterminalinvoice - INFO - ubt_temp_tmpterlocprdsalesamt processed successfully. Rows: 18453
+2026-01-16 11:25:45 - write_pandas - INFO - Current context - Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC, Warehouse: SPPL_WH_DEV
+2026-01-16 11:25:46 - write_pandas - INFO - Switched to Database: SPPL_DEV_DWH, Schema: SPPL_PUBLIC
+2026-01-16 11:25:47 - write_pandas - INFO - Table SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE exists. Clearing existing data...
+2026-01-16 11:25:47 - write_pandas - INFO - Successfully deleted records for PROCDATE = '20250625'
+2026-01-16 11:25:47 - write_pandas - INFO - Inserting new data into existing table...
+2026-01-16 11:25:49 - write_pandas - INFO - Verification: 18453 rows found in SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE
+2026-01-16 11:25:49 - write_pandas - INFO - Successfully written 18453 rows to SPPL_DEV_DWH.SPPL_PUBLIC.SP_UBT_GETTERMINALINVOICE
+2026-01-16 11:25:49 - write_pandas - INFO - Number of chunks: 1, Success: True
+2026-01-16 11:25:49 - Main_sp_ubt_getterminalinvoice - INFO - ETL process completed in 32.36 seconds.
