@@ -2,6 +2,12 @@ import pandas as pd
 import numpy as np
 from Snowflake_connection import *
 import logging
+import os
+
+
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parquet_dir = os.path.join(current_dir, "Parquets", pd.to_datetime("today").strftime("%Y%m%d%H%M"))
+os.makedirs(parquet_dir, exist_ok=True)
 
 logger = logging.getLogger(__name__)
 
@@ -45,6 +51,7 @@ def declare_variables(procdate):
     
     # Log the declared variables
     logger.info(f"Declared Variables - HQLocation: {HQLocation}, PreviousDateTime: {PreviousDateTime}, PeriodDateTime: {PeriodDateTime}, ActualDate: {ActualDate}")
+    
     return HQLocation, PreviousDateTime, PeriodDateTime, ActualDate
 
 
@@ -90,5 +97,13 @@ def ubt_temp_table(HQLocation, PreviousDateTime, PeriodDateTime, ActualDate):
         GROUP BY TxnDate
     """
     df_ubt_temp_table = pd.read_sql(query, connection)
+    
+    # ============================================================================
+    # Write the resulting DataFrame to a Parquet file for debugging
+    # ============================================================================
+    parquet_path = os.path.join(parquet_dir, "ubt_temp_table.parquet")
+    df_ubt_temp_table.to_parquet(parquet_path, engine='pyarrow', index=False)
+    logger.info(f"ubt_temp_table data written to Parquet file at: {parquet_path}")
+    # ============================================================================
     
     return df_ubt_temp_table
