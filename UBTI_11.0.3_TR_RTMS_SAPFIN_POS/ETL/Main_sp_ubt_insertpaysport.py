@@ -27,8 +27,10 @@ try:
     if cfg['MODE_CONFIG']['MODE'].upper() == 'LOCAL':
         procdate = cfg['USER CONFIG']['PROCDATE']
         print(f"Running in LOCAL mode with procdate: {procdate}")
+        logger.info(f"Running in LOCAL mode with procdate: {procdate}")
     else:
         procdate = sys.argv[1]
+        logger.info(f"Running in PRODUCTION mode with procdate: {procdate}")
 except Exception as e:
     logger.error("Error determining procdate", exc_info=e)
     raise
@@ -40,6 +42,8 @@ HQLocation, PreviousDateTime, PeriodDateTime, ActualDate = declare_variables(pro
 try:
     ubt_temp_df = ubt_temp_table(HQLocation, PreviousDateTime, PeriodDateTime, ActualDate)
     print("ubt_temp_table processed successfully.")
+    logger.info("ubt_temp_table processed successfully.")
 except Exception as e:
     logger.error("Error processing ubt_temp_table", exc_info=e)
     raise
+

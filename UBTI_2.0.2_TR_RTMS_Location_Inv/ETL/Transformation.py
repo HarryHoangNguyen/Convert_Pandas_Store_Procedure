@@ -2166,7 +2166,7 @@ def ubt_temp_datalocationinvoice_2nd(df_ubt_temp_datalocationinvoice,
     .merge(df_ubt_temp_location, left_on='LOC.LOCID', right_on='LOC.LOCID', how='inner')
     .merge(df_ubt_temp_chain,   left_on='LOC.CHID',   right_on='CH.CHID',     how='left')
 
-    # Pivot Ä‘á»ƒ tÃ¡ch REC vÃ  FUN thÃ nh 2 cá»™t riÃªng
+    # Pivot d? tách REC và FUN thành 2 c?t riêng
     .assign(
         AMOUNT_ADJ = lambda x: np.where(x['TAD.FLAG'] == 'FUN', x['AMOUNT'] * -1, x['AMOUNT']),
         SALES_TYPE = lambda x: np.where(x['TAD.FLAG'] == 'REC', '-2', '-3')

@@ -771,12 +771,12 @@ def ubt_temp_transactiondata(df_ubt_temp_trans, df_ubt_temp_bettype, df_ubt_temp
         ),
         WAGER1 = lambda x: x['WAGER'].fillna(0),
         WAGER2 = lambda x: x['SECONDWAGER'].fillna(0),
-        SALES1 = lambda x: x['SALES'].fillna(0.00000000000),
-        SALES2 = lambda x: x['SECONDSALES'].fillna(0.00000000000),
-        SALESCOMM1 = lambda x: x['SALESCOMM'].fillna(0.00000000000),
-        SALESCOMM2 = lambda x: x['SECONDSALESCOMM'].fillna(0.00000000000),
-        GST1 = lambda x: x['GST'].fillna(0.00000000000),
-        GST2 = lambda x: x['SECONDGST'].fillna(0.00000000000),
+        SALES1 = lambda x: x['SALES'].fillna(0),
+        SALES2 = lambda x: x['SECONDSALES'].fillna(0),
+        SALESCOMM1 = lambda x: x['SALESCOMM'].fillna(0),
+        SALESCOMM2 = lambda x: x['SECONDSALESCOMM'].fillna(0),
+        GST1 = lambda x: x['GST'].fillna(0),
+        GST2 = lambda x: x['SECONDGST'].fillna(0),
 
         RETURNAMOUNT = lambda x: np.where(
             x['TRANSACTIONTYPE'] == 2,
@@ -912,14 +912,14 @@ def ubt_temp_transactiondata(df_ubt_temp_trans, df_ubt_temp_bettype, df_ubt_temp
         MARKET = None,
         ODDS = None,
         MATCHKICKOFF = None,
-        WAGER1 = lambda x: x['WAGER'].fillna(0.00000000000),
-        WAGER2 = lambda x: x['SECONDWAGER'].fillna(0.00000000000),
-        SALES1 = lambda x: x['SALES'].fillna(0.00000000000),
-        SALES2 = lambda x: x['SECONDSALES'].fillna(0.00000000000),
-        SALESCOMM1 = lambda x: x['SALESCOMM'].fillna(0.00000000000),
-        SALESCOMM2 = lambda x: x['SECONDSALESCOMM'].fillna(0.00000000000),
-        GST1 = lambda x: x['GST'].fillna(0.00000000000),
-        GST2 = lambda x: x['SECONDGST'].fillna(0.00000000000),
+        WAGER1 = lambda x: x['WAGER'].fillna(0),
+        WAGER2 = lambda x: x['SECONDWAGER'].fillna(0),
+        SALES1 = lambda x: x['SALES'].fillna(0),
+        SALES2 = lambda x: x['SECONDSALES'].fillna(0),
+        SALESCOMM1 = lambda x: x['SALESCOMM'].fillna(0),
+        SALESCOMM2 = lambda x: x['SECONDSALESCOMM'].fillna(0),
+        GST1 = lambda x: x['GST'].fillna(0),
+        GST2 = lambda x: x['SECONDGST'].fillna(0),
         RETURNAMOUNT = lambda x: np.where(
             x['TRANSACTIONTYPE'] == 3,
             x['RETURNAMOUNT'].fillna(0),
@@ -1057,12 +1057,12 @@ def ubt_temp_transactiondata(df_ubt_temp_trans, df_ubt_temp_bettype, df_ubt_temp
         MATCHKICKOFF = lambda x: x['STARTTIME_sd'],
         WAGER1 = lambda x: x['WAGER_amt'].fillna(0),
         WAGER2 = lambda x: x['SECONDWAGER_amt'].fillna(0),
-        SALES1 = lambda x: x['SALES_amt'].fillna(0.00000000000),
-        SALES2 = lambda x: x['SECONDSALES_amt'].fillna(0.00000000000),
-        SALESCOMM1 = lambda x: x['SALESCOMM_amt'].fillna(0.00000000000),
-        SALESCOMM2 = lambda x: x['SECONDSALESCOMM_amt'].fillna(0.00000000000),
-        GST1 = lambda x: x['GST_amt'].fillna(0.00000000000),
-        GST2 = lambda x: x['SECONDGST_amt'].fillna(0.00000000000),
+        SALES1 = lambda x: x['SALES_amt'].fillna(0),
+        SALES2 = lambda x: x['SECONDSALES_amt'].fillna(0),
+        SALESCOMM1 = lambda x: x['SALESCOMM_amt'].fillna(0),
+        SALESCOMM2 = lambda x: x['SECONDSALESCOMM_amt'].fillna(0),
+        GST1 = lambda x: x['GST_amt'].fillna(0),
+        GST2 = lambda x: x['SECONDGST_amt'].fillna(0),
         RETURNAMOUNT = lambda x: np.where(
             x['TRANSACTIONTYPE_t'] == 2,
             x['RETURNAMOUNT_amt'].fillna(0),
@@ -1164,9 +1164,9 @@ def ubt_temp_transactiondata(df_ubt_temp_trans, df_ubt_temp_bettype, df_ubt_temp
     df_ubt_temp_transactiondata['TRANSACTIONTIMESTAMP'] = df_ubt_temp_transactiondata['TRANSACTIONTIMESTAMP'].apply(
         lambda x: x.strftime('%Y-%m-%d %H:%M:%S.%f')[:-3] if x.microsecond != 0 else x.strftime('%Y-%m-%d %H:%M:%S')
     )
-
-    
+    df_ubt_temp_transactiondata['TRANSACTIONTIMESTAMP'] = pd.to_datetime(df_ubt_temp_transactiondata['TRANSACTIONTIMESTAMP'],format = 'mixed').dt.strftime('%Y-%m-%d %H:%M:%S')
     # ================================= END TRANSFORMATION LOGIC =================================
+
     return df_ubt_temp_transactiondata
 
 def ubt_temp_lotterydraw(df_ubt_temp_placebettransactiontype):

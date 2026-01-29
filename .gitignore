@@ -8,3 +8,16 @@ __pycache__/
 
 #ignore csv file
 *.csv
+
+# ignore log files
+*.log
+*/logs/
+
+# ignore zip files
+*.zip
+
+#ignore parquet files
+*.parquet
+
+# ignore p8 files
+*.p8
