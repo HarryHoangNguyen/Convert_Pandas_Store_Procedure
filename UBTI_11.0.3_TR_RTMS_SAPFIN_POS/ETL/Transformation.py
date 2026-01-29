@@ -1,7 +1,11 @@
 import pandas as pd
 import numpy as np
 from Snowflake_connection import *
+import logging
 
+logger = logging.getLogger(__name__)
+
+# Establish Snowflake connection
 connection = snowflake_connection()
 
 
@@ -37,6 +41,11 @@ def declare_variables(procdate):
     PeriodDateTime = pd.to_datetime(df['PERIODDATETIME'].values[0])
     ActualDate = pd.to_datetime(df['ACTUALDATE'].values[0])
     
+    # log the query
+    logger.info(f"Executed declare_variables query: {query}")
+    
+    # Log the declared variables
+    logger.info(f"Declared Variables - HQLocation: {HQLocation}, PreviousDateTime: {PreviousDateTime}, PeriodDateTime: {PeriodDateTime}, ActualDate: {ActualDate}")
     return HQLocation, PreviousDateTime, PeriodDateTime, ActualDate
 
 
