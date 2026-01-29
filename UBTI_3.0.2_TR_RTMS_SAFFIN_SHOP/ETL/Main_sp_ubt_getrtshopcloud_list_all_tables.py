@@ -22,7 +22,7 @@ from write_pandas import *
 from logger_util import get_logger
 sp_name = "SP_UBT_GETRTSHOPCLOUD"
 etl_name = "UBTI_3.0.2_TR_RTMS_SAPFIN_SHOP"
-logger, log_folder = get_logger(sp_name)
+logger, log_folder, parquet_folder = get_logger(sp_name)
 connection = snowflake_connection()
 # ================= End Import Modules =================
 
@@ -172,7 +172,7 @@ if df_V2_TAD_Firstdate.empty:
 else:
     logger.info(f"sp_ubt_gettransamountdetails returned {len(df_V2_TAD_Firstdate)} records for procdate = {procdate}.")
     df_V2_TAD_Firstdate.rename(columns={'PRODNAME': 'PRODUCTNAME'}, inplace=True)
-    df_V2_TAD_Firstdate.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_TAD_FirstDate(sp_ubt_gettransamountdetails).csv'), index=False)
+    df_V2_TAD_Firstdate.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_TAD_FirstDate(sp_ubt_gettransamountdetails).parquet'), engine='pyarrow', index=False)
 
 #================= End df_V2_Tad_firstdate =================
 
@@ -213,7 +213,7 @@ if not paynowqr_df.empty or not paynow_df.empty:
     df_paynow_firstdate = df_paynow_firstdate[['TERDISPLAYID', 'PRODUCTNAME', 'AMOUNT', 'CT', 'FLAG', 'TRANSTYPE', 'FROMDATE', 'TODATE']]
 else:
     df_paynow_firstdate = pd.DataFrame(columns=['TERDISPLAYID', 'PRODUCTNAME', 'AMOUNT', 'CT', 'FLAG', 'TRANSTYPE', 'FROMDATE', 'TODATE'])
-df_paynow_firstdate.to_csv(os.path.join(log_folder, 'ubt_tmp_Paynow_Firstdate.csv'), index=False)
+df_paynow_firstdate.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_Paynow_Firstdate.parquet'), engine='pyarrow', index=False)
 logger.debug(f"Total PayNow records: rows={len(df_paynow_firstdate)}")
 # Output the result
 # ================= End UBT_TMP_Paynow_Firstdate =================
@@ -234,7 +234,7 @@ df_V2_TerminalTempData = df_V2_TAD_Firstdate[
                         .isin(['CAN', 'COL', 'GST', 'PAY', 'RBT', 'RFD', 'SAL'])
                         ][['TERDISPLAYID', 'PRODUCTNAME', 'AMOUNT', 'FLAG', 'TRANSTYPE']]\
                         .rename(columns={'TRANSTYPE': 'TYPE'})
-df_V2_TerminalTempData.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_TerminalTempData.csv'), index=False)
+df_V2_TerminalTempData.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_TerminalTempData.parquet'), engine='pyarrow', index=False)
 logger.debug(f"TerminalTempData rows={len(df_V2_TerminalTempData)}")
 #================= End df_V2_TerminalTempData =================
 
@@ -280,7 +280,7 @@ df_V2_LocationTempData = df_V2_LocationTempData[
 df_V2_LocationTempData.rename(columns={
     'LOCTYPEID': 'LOCTYPE'
 }, inplace=True)
-df_V2_LocationTempData.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_LocationTempData.csv'), index=False)
+df_V2_LocationTempData.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_LocationTempData.parquet'), engine='pyarrow', index=False)
 
 #================= End ubt_tmp_V2_LocationTempData =================
 
@@ -370,7 +370,7 @@ try:
         required_cols = ['TERDISPLAYID', 'PRODUCTNAME', 'AMOUNT', 'TICKETCOUNT', 'FLAG', 'TRANSTYPE', 'FROMDATE', 'TODATE']
         available_cols = [col for col in required_cols if col in df_ubt_tmp_V2_TAD_SecondDate.columns]
         df_ubt_tmp_V2_TAD_SecondDate = df_ubt_tmp_V2_TAD_SecondDate[available_cols]
-        df_ubt_tmp_V2_TAD_SecondDate.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_TAD_SecondDate.csv'), index=False)
+        df_ubt_tmp_V2_TAD_SecondDate.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_TAD_SecondDate.parquet'), engine='pyarrow', index=False)
         logger.debug(f"sp_ubt_gettransamountdetails for SecondDate Columns names {df_ubt_tmp_V2_TAD_SecondDate.columns.tolist()}, rows={len(df_ubt_tmp_V2_TAD_SecondDate)}")
     else:
         logger.info("vnowDayName is not 0 or 4, skipping second date processing.")
@@ -378,7 +378,7 @@ try:
 except Exception as e:
     logger.error("Error determining PeriodStartDate", exc_info=e)
     raise
-df_ubt_tmp_V2_TAD_SecondDate.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_TAD_SecondDate-(sp_ubt_gettransamountdetails).csv'), index=False)
+df_ubt_tmp_V2_TAD_SecondDate.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_TAD_SecondDate-(sp_ubt_gettransamountdetails).parquet'), engine='pyarrow', index=False)
 # Load more data using from sp_ubt_getamounttransaction and sp_ubt_getrtshopcloud_sport
 try:
     from sp_ubt_getrtshopcloud_sport import *
@@ -386,9 +386,9 @@ try:
     df_V2_GAT = sp_ubt_getamounttransaction(procdate, procdate, logger)
     df_V2_GAT.rename(columns={'TKTSERIALNUMBER': 'TICKETSERIALNUMBER'}, inplace=True)
     logger.debug(f"sp_ubt_getamounttransaction rows={len(df_V2_GAT)}, columns={df_V2_GAT.columns.tolist()}")
-    df_V2_GAT.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_GAT-(sp_ubt_getamounttransaction).csv'), index=False)
+    df_V2_GAT.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_GAT-(sp_ubt_getamounttransaction).parquet'), engine='pyarrow', index=False)
     df_ubt_getrtshopcloud_sport, vSeq = sp_ubt_getrtshopcloud_sport(procdate, vSeq, vGST_Branch, vInputTax, df_V2_TAD_Firstdate, df_V2_GAT, df_ubt_tmp_V2_TAD_SecondDate,logger)
-    df_ubt_getrtshopcloud_sport.to_csv(os.path.join(log_folder, 'ubt_tmp_ubt_getrtshopcloud_sport-(sp_ubt_getrtshopcloud_sport).csv'), index=False)
+    df_ubt_getrtshopcloud_sport.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_ubt_getrtshopcloud_sport-(sp_ubt_getrtshopcloud_sport).parquet'), engine='pyarrow', index=False)
     logger.debug(f"sp_ubt_getrtshopcloud_sport rows={len(df_ubt_getrtshopcloud_sport)}")
     df_V2_TB_RTMS_RTShopCloud = pd.concat([df_V2_TB_RTMS_RTShopCloud, df_ubt_getrtshopcloud_sport], ignore_index=True)
     logger.info(f"[sp_ubt_getrtshopcloud_sport] TB_RTMS_RTShopCloud updated successfully, rows={len(df_V2_TB_RTMS_RTShopCloud)}")
@@ -400,7 +400,7 @@ except Exception as e:
 try:
     from sp_ubt_getrtshopcloud_hr import *
     df_ubt_getrtshopcloud_hr = sp_ubt_getrtshopcloud_hr(procdate, vSeq, logger, df_V2_TAD_Firstdate, df_V2_GAT, df_ubt_tmp_V2_TAD_SecondDate, vInputTax)
-    df_ubt_getrtshopcloud_hr.to_csv(os.path.join(log_folder, 'ubt_tmp_ubt_getrtshopcloud_hr.csv'), index=False)
+    df_ubt_getrtshopcloud_hr.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_ubt_getrtshopcloud_hr.parquet'), engine='pyarrow', index=False)
     # Check if function returned None or empty DataFrame
     if df_ubt_getrtshopcloud_hr is None:
         logger.warning("sp_ubt_getrtshopcloud_hr returned None, initializing empty DataFrame")
@@ -439,7 +439,7 @@ df_V2_TB_RTMS_RTShopCloud = df_V2_TB_RTMS_RTShopCloud[[
         'SAPTAXBASEAMOUNT', 'CCCODE', 'SAPASSIGNMENT', 'CURRENCYCODE',
         'AMOUNT', 'PRODUCT', 'DRAWNUMBER', 'CUSTOMER'
 ]].reset_index(drop=True)
-df_V2_TB_RTMS_RTShopCloud.to_csv(os.path.join(log_folder, 'ubt_tmp_V2_TB_RTMS_RTShopCloud.csv'), index=False)
+df_V2_TB_RTMS_RTShopCloud.to_parquet(os.path.join(parquet_folder, 'ubt_tmp_V2_TB_RTMS_RTShopCloud.parquet'), engine='pyarrow', index=False)
 # Apply data type conversions to match Snowflake schema
 logger.info("Converting data types to match Snowflake schema...")
 

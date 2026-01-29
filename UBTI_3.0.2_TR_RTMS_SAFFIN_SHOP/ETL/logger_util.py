@@ -61,4 +61,4 @@ def get_logger(etl_name):
         warnings.showwarning = warn_to_log
         # -------------------------------------------------
 
-    return logger, log_folder
+    return logger, log_folder, parquet_folder
