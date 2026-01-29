@@ -7,13 +7,13 @@ connection = snowflake_connection()
 
 def declare_variables(procdate):
     HQLocation = '00888'
-    
-    query = """
+    procdate = pd.to_datetime(procdate).date()
+    query = f"""
         SELECT 
             PREVIOUSPERIODDATETIME, PERIODDATETIME, ACTUALDATE
             
         FROM ZTUBT_GETBUSINESSDATE_PERHOST
-        WHERE ACTUALDATE = TO_DATE('{procdate}')
+        WHERE ACTUALDATE = TO_DATE('{procdate}', 'YYYY-MM-DD')
         AND HOST = 3
     
     """

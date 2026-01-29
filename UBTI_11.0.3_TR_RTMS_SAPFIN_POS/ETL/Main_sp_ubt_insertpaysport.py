@@ -46,4 +46,3 @@ try:
 except Exception as e:
     logger.error("Error processing ubt_temp_table", exc_info=e)
     raise
-
