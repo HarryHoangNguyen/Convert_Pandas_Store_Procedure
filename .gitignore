@@ -21,3 +21,6 @@ __pycache__/
 
 # ignore p8 files
 *.p8
+
+# ignore cfg files
+*.cfg
