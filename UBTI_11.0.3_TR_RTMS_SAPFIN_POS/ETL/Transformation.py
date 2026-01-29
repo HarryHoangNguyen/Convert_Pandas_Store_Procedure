@@ -6,6 +6,14 @@ connection = snowflake_connection()
 
 
 def declare_variables(procdate):
+    """
+        Declare and retrieve necessary variables from the database based on the procdate.
+        Returns:
+            HQLocation (str): Hardcoded location value.
+            PreviousDateTime (datetime): Previous period date time from the database.
+            PeriodDateTime (datetime): Period date time from the database.
+            ActualDate (datetime): Actual date from the database.
+    """
     HQLocation = '00888'
     procdate = pd.to_datetime(procdate).date()
     query = f"""
@@ -28,6 +36,14 @@ def declare_variables(procdate):
 
 
 def ubt_temp_table(HQLocation, PreviousDateTime, PeriodDateTime, ActualDate):
+    
+    
+    """
+        Process the ubt_temp_table based on the provided parameters.
+        Returns:
+            DataFrame: Processed ubt_temp_table data.
+    """
+    
     
     query = """
         with ubt_temp_table as (
