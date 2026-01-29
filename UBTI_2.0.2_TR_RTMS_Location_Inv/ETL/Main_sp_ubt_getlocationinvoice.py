@@ -1,4 +1,4 @@
-#! /home/minhhoang/pyspark/test_older_liv_env/bin/python
+#! /home/minhhoang/pyspark/.venv/bin/python
 # %%
 import pandas as pd
 import numpy as np
