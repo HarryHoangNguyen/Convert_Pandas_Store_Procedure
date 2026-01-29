@@ -14,8 +14,14 @@ def declare_variables(procdate):
             PeriodDateTime (datetime): Period date time from the database.
             ActualDate (datetime): Actual date from the database.
     """
+    
+    # Declare HQLocation and fetch date variables from the database
     HQLocation = '00888'
+    
+    # Change procdate to date format for query
     procdate = pd.to_datetime(procdate).date()
+    
+    # Define and execute the query to get date variables
     query = f"""
         SELECT 
             PREVIOUSPERIODDATETIME, PERIODDATETIME, ACTUALDATE
