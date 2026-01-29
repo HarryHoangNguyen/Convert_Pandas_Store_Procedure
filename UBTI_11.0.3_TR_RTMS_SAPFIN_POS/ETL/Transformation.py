@@ -50,7 +50,7 @@ def ubt_temp_table(HQLocation, PreviousDateTime, PeriodDateTime, ActualDate):
             DataFrame: Processed ubt_temp_table data.
     """
     
-    
+    # Define and execute the query to process ubt_temp_table
     query = """
         with ubt_temp_table as (
             SELECT
