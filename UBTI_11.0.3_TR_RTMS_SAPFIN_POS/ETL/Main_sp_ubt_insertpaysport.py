@@ -18,8 +18,8 @@ from write_pandas import *
 # Set up logging
 # =====================================================
 init_logfiles()
-
-logger = logging.getLogger(__name__)
+ETL_name = "Main_SP_UBT_INSERTPAYSPORT"
+logger = logging.getLogger(ETL_name)
 
 # =====================================================
 # Suppress Warnings

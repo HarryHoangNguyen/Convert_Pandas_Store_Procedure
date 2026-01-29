@@ -33,7 +33,6 @@ def declare_variables(procdate):
         FROM ZTUBT_GETBUSINESSDATE_PERHOST
         WHERE ACTUALDATE = TO_DATE('{procdate}', 'YYYY-MM-DD')
         AND HOST = 3
-    
     """
     df = pd.read_sql(query, connection)
     
