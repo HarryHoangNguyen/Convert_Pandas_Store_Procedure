@@ -176,8 +176,12 @@ def ubt_temp_t(FromDate, ToDate, ConvertToUTC):
         'SWEEPINDICATOR': pd.Series(dtype='int32')
     })
 
-    # select SESS.TerDisplayID, MIN(SessionStartDateTime) AS SessionStartDateTime, MAX(SessionEndDateTime) AS SessionEndDateTime,
-	#     MIN(SessionStartDateTime + (convertToUTC * interval'1 Hour')) AS SessionStartDateTime, MAX( SessionEndDateTime + (convertToUTC * interval'1 Hour')) AS SessionEndDateTime,--convert to UTC--(3)
+    # select 
+    #       SESS.TerDisplayID, 
+    #       MIN(SessionStartDateTime) AS SessionStartDateTime, 
+    #       MAX(SessionEndDateTime) AS SessionEndDateTime,
+	#       MIN(SessionStartDateTime + (convertToUTC * interval'1 Hour')) AS SessionStartDateTime, 
+    #       MAX( SessionEndDateTime + (convertToUTC * interval'1 Hour')) AS SessionEndDateTime,--convert to UTC--(3)
 	#     LOC.SweepIndicator
 	#     FROM ztubt_session SESS
 	#     inner join ztubt_terminal ter on SESS.TerDisplayID=ter.TerDisplayID
@@ -200,7 +204,13 @@ def ubt_temp_t(FromDate, ToDate, ConvertToUTC):
         (df_ztubt_session['SESSION.SESSIONSTARTDATETIME'] >= FromDate) &
         (df_ztubt_session['SESSION.SESSIONSTARTDATETIME'] <= ToDate)
     ].groupby(['SESSION.TERDISPLAYID', 'LOCATION.SWEEPINDICATOR'], as_index=False
-    ).assign(
+    ).agg(
+        {
+            'SESSION.SESSIONSTARTDATETIME': 'min',
+            'SESSION.SESSIONENDDATETIME': 'max'
+        }
+    )\
+    .assign(
         TERDISPLAYID=lambda x: x['SESSION.TERDISPLAYID'],
         SESSIONSTARTDATETIME=lambda x: x['SESSION.SESSIONSTARTDATETIME'].min(),
         SESSIONENDDATETIME=lambda x: x['SESSION.SESSIONENDDATETIME'].max(),
