@@ -5,7 +5,7 @@ CREATE TABLE if not exists SP_UBT_CF_SUM_SUMARY_REPORT
 		HostDrawDatesId INT,
 		SubProd STRING,
 		FLAG VARCHAR(15),
-		Amount DOUBLE(32, 12),
+		Amount DOUBLE,
         PROCDATE STRING,
     X_ETL_NAME STRING,
     X_RECORD_INSERT_TS TIMESTAMP_NTZ,
@@ -46,7 +46,7 @@ create table if not exists sp_ubt_getdailyretsummarybychainreport
     productname STRING, 
     amount DOUBLE, 
     flag STRING,
-    , PROCDATE STRING,
+    PROCDATE STRING,
     X_ETL_NAME STRING,
     X_RECORD_INSERT_TS TIMESTAMP_NTZ,
     X_RECORD_UPDATE_TS TIMESTAMP_NTZ    
