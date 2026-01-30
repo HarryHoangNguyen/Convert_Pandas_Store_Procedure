@@ -1,3 +1,9 @@
+#! /home/harryhoangnguyen/HoangNguyen/Adnovum/Convert_Pandas_Store_Procedure/.venv/bin/python3
+# =====================================================
+# Import Libraries
+# =====================================================
+
+
 import pandas as pd
 import numpy as np
 from write_pandas import *
@@ -5,10 +11,23 @@ from Snowflake_connection import *
 from declare_variables import *
 from log_files import *
 from Transformation import *
-import logging, sys, os
+import logging, sys, os, warnings
 logger = logging.getLogger(__name__)
 
+# =====================================================
+# Initialize logging
+# =====================================================
 init_logfiles()
+
+# =====================================================
+# Suppress Warnings
+# =====================================================
+# Suppress all warnings
+warnings.filterwarnings('ignore')
+
+# Suppress specific pandas warnings
+pd.options.mode.chained_assignment = None
+pd.set_option('future.no_silent_downcasting', True)
 
 
 # =====================================================
@@ -73,3 +92,4 @@ except Exception as e:
     logger.error(f"Error executing final_select: {e}")
     sys.exit(1)
 
+print(df_final_select)
