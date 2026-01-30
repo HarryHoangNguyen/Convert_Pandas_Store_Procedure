@@ -3,7 +3,7 @@ import numpy as np
 import warnings
 from datetime import datetime, timedelta
 from sp_ubt_getcommonubtdates import sp_ubt_getcommonubtdates
-from Snowflake_connection import snowflake_connection
+from Utilities.Snowflake_connection import snowflake_connection
 import os, time, logging
 logger = logging.getLogger(__name__)
 # Suppress all warnings

@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from sp_ubt_getcommonubtdates import *
-from Snowflake_connection import snowflake_connection
+from Utilities.Snowflake_connection import snowflake_connection
 import logging
 
 logger = logging.getLogger(__name__)
