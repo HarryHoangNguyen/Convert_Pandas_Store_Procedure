@@ -1,7 +1,7 @@
 import os
 import pandas as pd
 import numpy as np
-from Snowflake_connection import snowflake_connection
+from Utilities.Snowflake_connection import snowflake_connection
 connection = snowflake_connection()
 schema = "SPPL_DEV_DWH.SPPL_PUBLIC"
 import logging

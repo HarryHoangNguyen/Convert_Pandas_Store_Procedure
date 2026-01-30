@@ -1,11 +1,11 @@
 # %%
 import pandas as pd
-from sp_ubt_getcommonubtdates import *
-from write_pandas import *
+from Store_Procedure_Common.sp_ubt_getcommonubtdates import *
+from Utilities.write_pandas import *
 import warnings, time
-from Snowflake_connection import *
+from Utilities.Snowflake_connection import *
 import sys
-from config_reader import read_local_config
+from Utilities.config_reader import read_local_config
 cfg = read_local_config()
 
 connection = snowflake_connection()
