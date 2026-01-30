@@ -1,14 +1,34 @@
-# %%
+#! /home/harryhoangnguyen/HoangNguyen/Adnovum/Convert_Pandas_Store_Procedure/.venv/bin/python3
 import pandas as pd
+import sys
+import os
+
+# Add the current directory to Python path to enable relative imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+
+from Utilities.config_reader import read_local_config
+cfg = read_local_config()
+
+# Only proceed if config is loaded successfully
+if cfg is None:
+    print("Failed to load configuration. Exiting...")
+    sys.exit(1)
+
 from Store_Procedure_Common.sp_ubt_getcommonubtdates import *
 from Utilities.write_pandas import *
 import warnings, time
 from Utilities.Snowflake_connection import *
-import sys
-from Utilities.config_reader import read_local_config
-cfg = read_local_config()
 
 connection = snowflake_connection()
+# Initialize Snowflake connection with error handling
+try:
+    connection = snowflake_connection()
+    print("Snowflake connection initialized successfully")
+except Exception as e:
+    print(f"Failed to initialize Snowflake connection: {e}")
+    connection = None
+
 warnings.filterwarnings("ignore")
 start_time = time.time()
 import logging
@@ -135,7 +155,7 @@ table_name = "SP_UBT_GETTRANSACTIONDATAFORINTERVAL"
 # ## Placebettransaction & Placebettransactiontype
 
 # %%
-from Transformation import *
+from ETL.Transformation import *
 # Using the function to get the placebettransaction dataframe
 print("Start date:  End Date: StartDateUTC: EnddateUTC:\n",startdate, enddate, startdateUTC, enddateUTC)
 df_ubt_temp_placebettransaction = ubt_temp_placebettransaction(startdate, enddate, startdateUTC, enddateUTC)
