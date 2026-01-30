@@ -1,11 +1,16 @@
+import os, time, logging, sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+logger = logging.getLogger(__name__)
+
+
 import pandas as pd
 import numpy as np
 import warnings
 from datetime import datetime, timedelta
-from sp_ubt_getcommonubtdates import sp_ubt_getcommonubtdates
+from Store_Procedure_Common.sp_ubt_getcommonubtdates import sp_ubt_getcommonubtdates
 from Utilities.Snowflake_connection import snowflake_connection
-import os, time, logging
-logger = logging.getLogger(__name__)
+
 # Suppress all warnings
 warnings.filterwarnings('ignore')
 pd.options.mode.chained_assignment = None

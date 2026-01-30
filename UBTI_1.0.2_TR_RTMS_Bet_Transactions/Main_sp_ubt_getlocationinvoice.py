@@ -1,5 +1,14 @@
 #! /home/harryhoangnguyen/HoangNguyen/Adnovum/Convert_Pandas_Store_Procedure/.venv/bin/python3
-# %%
+
+# =====================================================
+import os, sys, time, warnings
+# Add the current directory to Python path to enable relative imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+
+
+
+
 # =====================================================
 # Import Libraries
 # =====================================================
@@ -13,7 +22,6 @@ from ETL.declare_Variables_sp_ubt_getlocationinvoice import *
 from ETL.Transformation_sp_ubt_getlocationinvoice import *
 from Utilities.write_pandas import *
 from Utilities.config_reader import *
-import os, sys, time, warnings
 import logging
 
 # ===================================================== 

@@ -1,7 +1,14 @@
+
+import os, time, logging, sys
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+logger = logging.getLogger(__name__)
+
+
 import pandas as pd
 import numpy as np
-from sp_ubt_getcommonubtdates import *
-from Snowflake_connection import snowflake_connection
+from Store_Procedure_Common.sp_ubt_getcommonubtdates import *
+from Utilities.Snowflake_connection import snowflake_connection
 import logging
 logger = logging.getLogger(__name__)
 

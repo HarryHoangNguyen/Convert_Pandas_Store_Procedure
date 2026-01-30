@@ -1348,7 +1348,7 @@ def ubt_temp_datalocationinvoice (df_ubt_temp_transamountdetaildata, df_ubt_temp
                     'TOTO'
                     )
                 ),
-                AMOUNT = 0
+                AMOUNT = 0,
             ).groupby(
                 ['TERDISPLAYID_pbtth', 'PRODID_pbtth', 'SUB_PROD','TICKETSERIALNUMBER_gtat'],
                 as_index=False
@@ -1357,7 +1357,8 @@ def ubt_temp_datalocationinvoice (df_ubt_temp_transamountdetaildata, df_ubt_temp
             ).rename(columns={
                 'TICKETSERIALNUMBER_gtat': 'TICKETSERIALNUMBER',
                 'TERDISPLAYID_pbtth': 'TERDISPLAYID',
-                'PRODID_pbtth': 'PRODID'
+                'PRODID_pbtth': 'PRODID',
+                'TOTALCOUNT': 'TOTAL'
             })[['TICKETSERIALNUMBER','AMOUNT','TOTAL', 'TERDISPLAYID', 'PRODID','SUB_PROD']]
     df_a = df_a.add_prefix('a.')
     df_can = df_can.add_prefix('can.')
