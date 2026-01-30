@@ -1,9 +1,20 @@
 import pandas as pd
 import numpy as np
 from Snowflake_connection import *
-import logging, sys, os
+import logging, sys, os, warnings
 logger = logging.getLogger(__name__)
 connection = snowflake_connection()
+
+# =====================================================
+# Suppress Warnings
+# =====================================================
+# Suppress all warnings
+warnings.filterwarnings('ignore')
+
+# Suppress specific pandas warnings
+pd.options.mode.chained_assignment = None
+pd.set_option('future.no_silent_downcasting', True)
+
 
 
 # =====================================================
