@@ -4,9 +4,7 @@ import warnings
 from datetime import datetime, timedelta
 from sp_ubt_getcommonubtdates import sp_ubt_getcommonubtdates
 from Snowflake_connection import snowflake_connection
-import os, time
-
-import logging
+import os, time, logging
 logger = logging.getLogger(__name__)
 # Suppress all warnings
 warnings.filterwarnings('ignore')
@@ -35,7 +33,6 @@ def sp_ubt_gettransamountdetails(in_fromdatetime, in_todatetime):
     # Declare variables by calling sp_ubt_getcommonubtdates & sp_ubt_getpaynowsuccessstatus
     logger.info(f"[SP_GETTRANSAMOUNTDETAILS] Calling SP_UBT_GETCOMMONUBTDATES ...")
     df_getcommonubtdates = sp_ubt_getcommonubtdates(in_fromdatetime, in_todatetime)
-    df_getcommonubtdates.to_csv('debug_time.csv', index=False)
     if df_getcommonubtdates.empty:
         logger.warning(f"[SP_GETTRANSAMOUNTDETAILS] "
                     f"SP_UBT_GETCOMMONUBTDATES returned no records.")
@@ -908,7 +905,6 @@ def sp_ubt_gettransamountdetails(in_fromdatetime, in_todatetime):
             GROUP BY CBT.TERDISPLAYID
         """
         df_temp = pd.read_sql(query, connection)
-
         #filter only horse racing on df_ter_prod
         df_ter_prod_filter = df_ter_prod[df_ter_prod["PRODNAME"] == "HORSE RACING"].reset_index(drop=True)
 
@@ -1804,8 +1800,6 @@ def sp_ubt_gettransamountdetails(in_fromdatetime, in_todatetime):
                     on=['TERDISPLAYID'],
                     how='left')
         df_trans_final = df_trans_final[~df_trans_final['PRODNAME'].str.startswith('EXPIRED-')]
-
-
         df_trans_final['FLAG'] = np.where(
                     df_trans_final['PRODNAME'].str.startswith('REFUNDED-'),
                     'RFD',
