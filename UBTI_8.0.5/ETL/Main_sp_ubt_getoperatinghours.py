@@ -73,3 +73,4 @@ except Exception as e:
     logger.error(f"Error executing final_select: {e}")
     sys.exit(1)
 
+print(df_final_select)
