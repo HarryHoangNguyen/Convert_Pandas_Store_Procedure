@@ -74,7 +74,7 @@ def write_to_snowflake(dataframe, connection, database, schema, table_name, proc
             )
 
         # Verify data was written
-        cur.execute(f"SELECT COUNT(*) FROM {result[0]}.{result[1]}.{table_name.upper()}")
+        cur.execute(f"SELECT COUNT(*) FROM {result[0]}.{result[1]}.{table_name.upper()} WHERE PROCDATE = '{procdate}';")
         count_result = cur.fetchone()
         print(f"Verification: {count_result[0]} rows found in {result[0]}.{result[1]}.{table_name.upper()}")
         logger.info(f"Verification: {count_result[0]} rows found in {result[0]}.{result[1]}.{table_name.upper()}")
