@@ -1,6 +1,6 @@
 import pandas as pd
 from datetime import datetime, timedelta
-from Snowflake_connection import snowflake_connection
+from Utilities.Snowflake_connection import snowflake_connection
 connection = snowflake_connection()
 schema = "SPPL_DEV_DWH.SPPL_PUBLIC"
 
