@@ -155,7 +155,7 @@ table_name = "SP_UBT_GETTRANSACTIONDATAFORINTERVAL"
 # ## Placebettransaction & Placebettransactiontype
 
 # %%
-from ETL.Transformation import *
+from ETL.Transformation_gettransactiondataforinterval import *
 # Using the function to get the placebettransaction dataframe
 print("Start date:  End Date: StartDateUTC: EnddateUTC:\n",startdate, enddate, startdateUTC, enddateUTC)
 df_ubt_temp_placebettransaction = ubt_temp_placebettransaction(startdate, enddate, startdateUTC, enddateUTC)
