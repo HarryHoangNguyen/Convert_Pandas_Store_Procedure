@@ -1348,12 +1348,13 @@ def ubt_temp_datalocationinvoice (df_ubt_temp_transamountdetaildata, df_ubt_temp
                     'TOTO'
                     )
                 ),
-                AMOUNT = 0,
+                AMOUNT = lambda x: 0,
             ).groupby(
                 ['TERDISPLAYID_pbtth', 'PRODID_pbtth', 'SUB_PROD','TICKETSERIALNUMBER_gtat'],
                 as_index=False
             ).agg(
                 TOTALCOUNT = ('TICKETSERIALNUMBER_gtat', 'nunique'),
+                AMOUNT = ('AMOUNT', 'first')  # Add AMOUNT aggregation
             ).rename(columns={
                 'TICKETSERIALNUMBER_gtat': 'TICKETSERIALNUMBER',
                 'TERDISPLAYID_pbtth': 'TERDISPLAYID',
