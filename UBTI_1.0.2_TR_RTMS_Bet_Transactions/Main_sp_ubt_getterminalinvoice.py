@@ -57,12 +57,13 @@ logger.info(f"Current working directory: {current_dir}")
 # ============================================================
 # ===================== Declare Variables ====================
 # ============================================================
+print("Declaring variables...")
 try:
     if cfg['MODE_CONFIG']['MODE'] == 'LOCAL':
-        procdate = pd.to_datetime(cfg['USER CONFIG']['PROCDATE'], format='%Y-%m-%d')
+        procdate = pd.to_datetime(cfg['USER CONFIG']['PROCDATE'])
     else:
         procdate = sys.argv[1]
-        procdate = pd.to_datetime(procdate, format='%Y-%m-%d')
+        procdate = pd.to_datetime(procdate)
     logger.info(f"procdate set to: {procdate}")
 except Exception as e:
     logger.error(f"Error setting procdate: {e}")
@@ -120,8 +121,6 @@ except Exception as e:
     logger.error(f"Error processing UBT_TEMP_TERMINAL: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_terminal.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_terminal.csv') else None
-df_ubt_temp_terminal.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_terminal.csv', index=False)
 
 # ==============================
 # UBT_TEMP_PRODUCT
@@ -137,8 +136,7 @@ except Exception as e:
     print(f"Error processing UBT_TEMP_PRODUCT: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_product.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_product.csv') else None
-df_ubt_temp_product.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_product.csv', index=False)
+
 # ==============================
 # UBT_TEMP_LOCATION
 # ==============================
@@ -153,8 +151,7 @@ except Exception as e:
     print(f"Error processing UBT_TEMP_LOCATION: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_location.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_location.csv') else None
-df_ubt_temp_location.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_location.csv', index=False)
+
 # ==============================
 # UBT_TEMP_TmpTicketByWageAndSales
 # ==============================
@@ -172,8 +169,6 @@ except Exception as e:
     print(f"Error processing UBT_TEMP_TmpTicketByWageAndSales: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_TmpTicketByWageAndSales.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_TmpTicketByWageAndSales.csv') else None
-df_ubt_temp_TmpTicketByWageAndSales.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_TmpTicketByWageAndSales.csv', index=False)
 
 
 
@@ -196,8 +191,6 @@ except Exception as e:
     logger.error(f"Error processing UBT_TEMP_ResultCashlessInTerminal: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_ResultCashlessInTerminal.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_ResultCashlessInTerminal.csv') else None
-df_ubt_temp_ResultCashlessInTerminal.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_ResultCashlessInTerminal.csv', index=False)
 
 # ==============================
 # ubt_temp_iTOTO
@@ -214,8 +207,7 @@ except Exception as e:
     print(f"Error processing ubt_temp_iTOTO: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_iTOTO.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_iTOTO.csv') else None
-df_ubt_temp_iTOTO.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_iTOTO.csv', index=False)
+
 # ==============================
 # UBT_TEMP_GROUPTOTO
 # ==============================
@@ -231,8 +223,7 @@ except Exception as e:
     print(f"Error processing UBT_TEMP_GROUPTOTO: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_GroupTOTO.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_GroupTOTO.csv') else None
-df_ubt_temp_GroupTOTO.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_GroupTOTO.csv', index=False)
+
 # ==============================
 # ubt_temp_CancelledBetTicketState
 # ==============================
@@ -248,8 +239,7 @@ except Exception as e:
     print(f"Error processing ubt_temp_CancelledBetTicketState: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_CancelledBetTicketState.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_CancelledBetTicketState.csv') else None
-df_ubt_temp_CancelledBetTicketState.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_CancelledBetTicketState.csv', index=False)
+
 # =============================
 # ubt_temp_SalesGroupToto
 # ============================
@@ -275,8 +265,7 @@ except Exception as e:
     print(f"Error processing ubt_temp_SalesGroupToto: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_SalesGroupToto.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_SalesGroupToto.csv') else None
-df_ubt_temp_SalesGroupToto.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_SalesGroupToto.csv', index=False)
+
 # =============================
 # ubt_temp_salestoto
 # ============================
@@ -301,8 +290,7 @@ except Exception as e:
     print(f"Error processing ubt_temp_salestoto: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_salestoto.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_salestoto.csv') else None
-df_ubt_temp_salestoto.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_salestoto.csv', index=False)
+
 # =============================
 # ubt_temp_transamountdetaildata
 # ============================
@@ -342,8 +330,7 @@ except Exception as e:
     print(f"Error processing ubt_temp_transamountdetaildata: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_transamountdetaildata.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_transamountdetaildata.csv') else None
-df_ubt_temp_transamountdetaildata.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_transamountdetaildata.csv', index=False)
+
 
 # =============================
 # ubt_temp_sales_scandsr
@@ -361,8 +348,6 @@ except Exception as e:
     print(f"Error processing ubt_temp_sales_scandsr: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_sales_scandsr.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_sales_scandsr.csv') else None
-df_ubt_temp_sales_scandsr.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_sales_scandsr.csv', index=False)
 
 # =============================
 # ubt_temp_salesfactorconfig
@@ -378,8 +363,6 @@ except Exception as e:
     print(f"Error processing ubt_temp_salesfactorconfig: {e}")
     sys.exit(1)
 
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_salesfactorconfig.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_salesfactorconfig.csv') else None
-df_ubt_temp_salesfactorconfig.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_salesfactorconfig.csv', index=False)
 
 
 
@@ -428,8 +411,6 @@ except Exception as e:
     logger.error(f"Error processing ubt_temp_tmpterlocprdsalesamt: {e}")
     print(f"Error processing ubt_temp_tmpterlocprdsalesamt: {e}")
     sys.exit(1)
-os.remove('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_tmpterlocprdsalesamt.csv') if os.path.exists('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_tmpterlocprdsalesamt.csv') else None
-df_ubt_temp_tmpterlocprdsalesamt.to_csv('/mnt/c/Users/minhhoang/Compare_401/ubt_temp_tmpterlocprdsalesamt.csv', index=False)
 
 # =============================
 # Kết thúc ETL
