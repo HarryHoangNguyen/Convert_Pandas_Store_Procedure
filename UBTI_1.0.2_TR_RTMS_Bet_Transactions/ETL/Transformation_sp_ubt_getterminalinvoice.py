@@ -2812,8 +2812,7 @@ def ubt_temp_tmpterlocprdsalesamt(df_ubt_temp_transamountdetaildata,
 # 			GROUP BY A.TerDisplayID, A.TransactionDate, A.LocDisplayID
 # 		) DB ON DB.LocDisplayID=CR.LocDisplayID AND DB.TransactionDate=CR.TransactionDate AND DB.TerDisplayID=CR.TerDisplayID
 # 		GROUP BY DB.TerDisplayID, DB.TransactionDate, DB.LocDisplayID,CR.TerDisplayID,CR.TransactionDate, CR.LocDisplayID
-    os.remove('debug_tmpterlocprdsalesamt_before_727.csv') if os.path.exists('debug_tmpterlocprdsalesamt_before_727.csv') else None
-    df_ubt_temp_tmpterlocprdsalesamt.to_csv('debug_tmpterlocprdsalesamt_before_727.csv', index=False)
+    
     df_cr = df_ubt_temp_tmpterlocprdsalesamt[
         df_ubt_temp_tmpterlocprdsalesamt["SALES_TYPE"].isin(
             ['2', '3', '7', '108', '110', '112', '4', '61']
@@ -2837,8 +2836,7 @@ def ubt_temp_tmpterlocprdsalesamt(df_ubt_temp_transamountdetaildata,
         "AMOUNT": "CR_AMOUNT"
     })
 
-    os.remove('debug_tmpterlocprdsalesamt_cr.csv') if os.path.exists('debug_tmpterlocprdsalesamt_cr.csv') else None
-    df_cr.to_csv('debug_tmpterlocprdsalesamt_cr.csv', index=False)
+    
 
     df_db = df_ubt_temp_tmpterlocprdsalesamt[
         (df_ubt_temp_tmpterlocprdsalesamt["SALES_TYPE"] == '1') &
@@ -2860,9 +2858,7 @@ def ubt_temp_tmpterlocprdsalesamt(df_ubt_temp_transamountdetaildata,
         "TOTALCOUNT": "DB_TOTALCOUNT",
         "AMOUNT": "DB_AMOUNT"
     })
-    os.remove('debug_tmpterlocprdsalesamt_db.csv') if os.path.exists('debug_tmpterlocprdsalesamt_db.csv') else None
-    df_db.to_csv('debug_tmpterlocprdsalesamt_db.csv', index=False)
-
+    
     df_temp = df_db.merge(
         df_cr,
         left_on=["DB_TERDISPLAYID", "DB_TRANSACTIONDATE", "DB_LOCDISPLAYID"],
