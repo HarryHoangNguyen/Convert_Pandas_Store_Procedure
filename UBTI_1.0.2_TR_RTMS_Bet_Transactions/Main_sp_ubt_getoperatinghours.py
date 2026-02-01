@@ -1,4 +1,12 @@
 #! /home/harryhoangnguyen/HoangNguyen/Adnovum/Convert_Pandas_Store_Procedure/.venv/bin/python3
+
+# =====================================================
+import os, sys, time, warnings
+# Add the current directory to Python path to enable relative imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+
+
 # =====================================================
 # Import Libraries
 # =====================================================
@@ -6,11 +14,9 @@
 
 import pandas as pd
 import numpy as np
-from write_pandas import *
-from Snowflake_connection import *
-from declare_variables import *
-from log_files import *
-from Transformation import *
+from Utilities import *
+from ETL.declare_variables_sp_ubt_getoperatinghours import *
+from ETL.Transformation_sp_ubt_getoperatinghours import *
 import logging, sys, os, warnings
 logger = logging.getLogger(__name__)
 
