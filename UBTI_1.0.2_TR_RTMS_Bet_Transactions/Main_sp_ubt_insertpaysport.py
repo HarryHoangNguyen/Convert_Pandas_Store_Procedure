@@ -7,18 +7,15 @@
 import pandas as pd
 import os, sys, time, warnings
 import numpy as np
-from Transformation import *
+from ETL.Transformation_sp_ubt_insertpaysport import *
 import logging
-from log_files import *
-from config_reader import read_local_config
-from Snowflake_connection import *
-from write_pandas import *
+from Utilities import *
 
 # ===================================================== 
 # Set up logging
 # =====================================================
-init_logfiles()
 ETL_name = "Main_SP_UBT_INSERTPAYSPORT"
+init_logfiles(ETL_name)
 logger = logging.getLogger(ETL_name)
 
 # =====================================================
