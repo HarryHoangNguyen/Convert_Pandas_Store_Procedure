@@ -23,7 +23,9 @@ logger = logging.getLogger(__name__)
 # =====================================================
 # Initialize logging
 # =====================================================
-init_logfiles()
+ETL_name = "Main_SP_UBT_GETOPERATINGHOURS"
+
+init_logfiles(ETL_name)
 
 # =====================================================
 # Suppress Warnings

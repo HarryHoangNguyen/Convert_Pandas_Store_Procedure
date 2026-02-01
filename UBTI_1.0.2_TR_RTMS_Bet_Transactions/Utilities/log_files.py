@@ -3,7 +3,7 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-def init_logfiles():
+def init_logfiles(ETL_NAME):
 
     # Tạo thư mục logs nếu chưa tồn tại
     today = datetime.now()
@@ -12,7 +12,7 @@ def init_logfiles():
     os.makedirs(logs_dir, exist_ok=True)
 
     # Tạo tên file log với timestamp
-    log_filename = f"Main_SP_UBT_GETOPERATINGHOURS{today.strftime('%Y%m%d%H%M')}.log"
+    log_filename = f"{ETL_NAME}{today.strftime('%Y%m%d%H%M')}.log"
     log_filepath = os.path.join(logs_dir, log_filename)
 
     level_logging = 'INFO'  # Chỉnh mức logging ở đây: DEBUG, INFO, WARNING, ERROR, CRITICAL
@@ -25,6 +25,5 @@ def init_logfiles():
         datefmt='%Y-%m-%d %H:%M:%S',
         encoding='utf-8'                     # Quan trọng để ghi tiếng Việt không bị lỗi font
     )
-    ETL_name = "Main_SP_UBT_GETOPERATINGHOURS"
-    logger = logging.getLogger(ETL_name)
+    logger = logging.getLogger(ETL_NAME)
     return True
