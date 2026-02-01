@@ -97,9 +97,9 @@ def ubt_temp_datalocationinvoice (df_ubt_temp_transamountdetaildata, df_ubt_temp
                                                                 df_ubt_temp_cancelledbeticket, df_ubt_temp_itotolocation,
                                                                 df_ubt_temp_grouptotolocation, df_ubt_temp_salesgrouptotolocation, df_ubt_temp_resultcashlesslocation,
                                                                 df_ubt_temp_getamounttrans,
-                                                               vinvoiceperiodid, vfromdatetimeigtUTC, vtodatetimeigtUTC, vfromdatetimeOB_UTC, vtodatetimeOB_UTC,
+                                                                vinvoiceperiodid, vfromdatetimeigtUTC, vtodatetimeigtUTC, vfromdatetimeOB_UTC, vtodatetimeOB_UTC,
                                                                 vfromdatetimeBMCS_UTC, vtodatetimeBMCS_UTC,
-                                                               vactual_date,vfromdateigt, vtodateigt):
+                                                                vactual_date,vfromdateigt, vtodateigt):
 
     # =========================================================================
     query = f"""
