@@ -1,13 +1,22 @@
+#! /home/harryhoangnguyen/HoangNguyen/Adnovum/Convert_Pandas_Store_Procedure/.venv/bin/python3
+
+# =====================================================
+import os, sys, time, warnings
+# Add the current directory to Python path to enable relative imports
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, current_dir)
+
+
 import pandas as pd
 import numpy as np
-from sp_ubt_getcommonubtdates import *
-from sp_ubt_gettransamountdetails import *
-from sp_ubt_getamounttransaction import *
-from sp_ubt_getsweepsalespersrterminal import *
-from declare_variables import *
-from Transformation import *
-from write_pandas import *
-from Snowflake_connection import *
+from Store_Procedure_Common.sp_ubt_getcommonubtdates import *
+from Store_Procedure_Common.sp_ubt_gettransamountdetails import *
+from Store_Procedure_Common.sp_ubt_getamounttransaction import *
+from Store_Procedure_Common.sp_ubt_getsweepsalespersrterminal import *
+from ETL.declare_variables_sp_ubt_getterminalinvoice import *
+from ETL.Transformation_sp_ubt_getterminalinvoice import *
+from Utilities.write_pandas import *
+from Utilities.Snowflake_connection import *
 
 connection = snowflake_connection()
 import logging
