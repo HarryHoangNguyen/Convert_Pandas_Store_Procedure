@@ -1,1 +1,0 @@
-select * from sp_ubt_gettransactiondataforinterval('2025-09-23','2025-09-24') -- 1031
