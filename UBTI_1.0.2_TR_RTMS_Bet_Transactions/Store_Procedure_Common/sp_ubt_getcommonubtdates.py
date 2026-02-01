@@ -134,6 +134,3 @@ def sp_ubt_getcommonubtdates(vfromdate, vtodate):
 
 
     return df_dates
-
-df_dates = sp_ubt_getcommonubtdates('2025-09-23 06:00:00', '2025-09-24 05:59:59')
-df_dates.to_csv('test_dates_output.csv', index=False)
